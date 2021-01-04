@@ -26,6 +26,9 @@ describe "studio index page" do
 
   it "shows all studios and has their associated movies under those studios" do
     visit "/studios/"
+    expect(page).to have_content("studio 1")
+    expect(page).to have_content("studio 2")
+    
     within(page.find("#s-#{@studio1.id}")) do
       expect(page).to have_content("movie 1")
       expect(page).to have_content("movie 2")
