@@ -4,6 +4,5 @@ describe Movie, type: :model do
     it {should belong_to :studio}
     it {should have_many :actors}
     it {should have_many :actor_movies}
-
   end
 end
