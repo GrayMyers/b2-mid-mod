@@ -14,14 +14,14 @@ describe "studio index page" do
     @actor2 = Actor.create(name: "actor 2", age: "47")
     @actor3 = Actor.create(name: "actor 3", age: "28")
 
-    ActorMovies.create(movie: @movie1, actor: @actor1)
-    ActorMovies.create(movie: @movie1, actor: @actor2)
+    ActorMovie.create(movie: @movie1, actor: @actor1)
+    ActorMovie.create(movie: @movie1, actor: @actor2)
 
-    ActorMovies.create(movie: @movie2, actor: @actor2)
-    ActorMovies.create(movie: @movie2, actor: @actor3)
+    ActorMovie.create(movie: @movie2, actor: @actor2)
+    ActorMovie.create(movie: @movie2, actor: @actor3)
 
-    ActorMovies.create(movie: @movie3, actor: @actor1)
-    ActorMovies.create(movie: @movie3, actor: @actor3)
+    ActorMovie.create(movie: @movie3, actor: @actor1)
+    ActorMovie.create(movie: @movie3, actor: @actor3)
   end
 
   it "shows all studios and has their associated movies under those studios" do
