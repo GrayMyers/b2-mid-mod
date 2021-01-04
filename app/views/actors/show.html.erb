@@ -1,0 +1,8 @@
+<h1><%= @actor.name %></h1>
+<h3>Age: <%= @actor.age %></h3>
+<h3>Associates</h3>
+<ul>
+  <% @actor.assoicates.each do |associate| %>
+    <li><%= associate.name %></li>
+  <% end %>
+</ul>
