@@ -32,7 +32,6 @@ describe Actor, type: :model do
 
       ActorMovie.create(movie: @movie3, actor: @actor1)
       ActorMovie.create(movie: @movie3, actor: @actor3)
-      visit "/actors/#{@actor1.id}"
     end
 
     it "associates" do
