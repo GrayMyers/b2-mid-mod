@@ -3,6 +3,10 @@
 <h3>Genre: <%= @movie.genre %></h3>
 
 <h2>Actors</h2>
+<%= form_tag("/movies/#{params[:id]}", method: :patch, id: "actor-form") %>
+<p>Name:</p>
+<%= text_field_tag :name %>
+<%= submit_tag "Add Actor" %>
 <p>Average actor age: <%= @movie.average_age %></p>
 <ul>
   <% @movie.actors_by_age.each do |actor| %>
