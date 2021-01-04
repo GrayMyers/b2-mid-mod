@@ -37,6 +37,6 @@ describe "movie show page" do
   end
 
   it "shows average age of all actors" do
-    expect(page).to have_content("Average age: #{@movie2.average_age}")
+    expect(page).to have_content("Average actor age: #{@movie2.average_age}")
   end
 end
