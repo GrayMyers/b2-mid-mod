@@ -39,4 +39,13 @@ describe "movie show page" do
   it "shows average age of all actors" do
     expect(page).to have_content("Average actor age: #{@movie2.average_age}")
   end
+
+  it "has a form for an actor's name which adds an existing actor to that movie" do
+    form = page.find("#actor-form")
+    within(form) do
+      fill_in("name").with("actor 1")
+      click_on("Add Actor")
+    end
+    expect(page).to have_content("actor 1")
+  end
 end
