@@ -6,6 +6,6 @@
 <p>Average actor age: <%= @movie.average_age %></p>
 <ul>
   <% @movie.actors_by_age.each do |actor| %>
-    <li id="actor-#{actor.id}"><%= actor.name %></li>
+    <li id="actor-<%=actor.id%>"><%= actor.name %></li>
   <% end %>
 </ul>
